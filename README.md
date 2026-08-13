@@ -64,6 +64,20 @@ python compare_baselines.py --data path/to/Security.csv \
 
 Reward: `reward_scale * (MSE_base − MSE_final) − invoke_cost * action`.
 
+## Results — Security
+
+Time-MMD Security, `seq_len=24`, `pred_len=6`, z-normalized test split (61 windows).
+
+| Model | Test MSE | Test MAE |
+|-------|----------|----------|
+| Historical mean | **59.36** | **3.43** |
+| DLinear | 73.96 | 4.59 |
+| Ours | 80.24 | 5.29 |
+| TinyTransformer | 89.40 | 5.95 |
+| Drift | 113.20 | 5.10 |
+
+Ours beats Drift and TinyTransformer, but not historical mean or DLinear on this split. At evaluation the acquisition policy skipped text (`invoke_rate = 0`), so Ours matched its numerical path only.
+
 ## Layout
 
 ```
