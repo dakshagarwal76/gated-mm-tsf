@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 640" width="1100" height="640">
+  <defs>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#2f6fed"/></marker>
+    <marker id="ap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#7c3aed"/></marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#8b95a5"/></marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1100" height="640" fill="#ffffff"/>
+  <text x="550" y="32" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#1a2332">RL-Enhanced Multimodal Time Series Forecasting</text>
+  <text x="550" y="54" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#5a6577">Numerical forecast, text augmentation, and closed-loop reward training</text>
+
+  <text x="50" y="78" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#5a6577">Input Data</text>
+  <text x="380" y="78" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#5a6577">Model Pipeline</text>
+  <text x="900" y="78" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#5a6577">Output</text>
+
+  <rect x="20" y="100" width="140" height="58" rx="10" fill="#e8f0fe" stroke="#7aa2f7" stroke-width="1.6"/>
+  <text x="90" y="124" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1a2332">Numerical TS</text>
+  <text x="90" y="142" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#5a6577">Time-MMD window</text>
+
+  <rect x="20" y="300" width="140" height="58" rx="10" fill="#f3e8ff" stroke="#a78bfa" stroke-width="1.6"/>
+  <text x="90" y="324" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1a2332">Paired Text</text>
+  <text x="90" y="342" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#5a6577">raw records</text>
+
+  <path d="M164 129 H176 V329 H164" fill="none" stroke="#8b95a5" stroke-width="1.5"/>
+  <text x="190" y="240" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#5a6577" transform="rotate(-90 190 240)">aligned window</text>
+
+  <line x1="160" y1="129" x2="220" y2="129" stroke="#2f6fed" stroke-width="2.2" marker-end="url(#ab)"/>
+  <rect x="220" y="95" width="160" height="78" rx="10" fill="#e8f0fe" stroke="#7aa2f7" stroke-width="1.7"/>
+  <circle cx="362" cy="109" r="9" fill="#2f6fed"/>
+  <text x="362" y="113" text-anchor="middle" font-size="10" fill="#fff">F</text>
+  <text x="300" y="128" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1a2332">Frozen TSFM</text>
+  <text x="300" y="146" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#2f6fed">Moirai backbone</text>
+  <text x="300" y="162" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#5a6577">mean + uncertainty</text>
+
+  <line x1="380" y1="129" x2="440" y2="129" stroke="#2f6fed" stroke-width="2.2" marker-end="url(#ab)"/>
+  <rect x="440" y="95" width="170" height="78" rx="10" fill="#f3e8ff" stroke="#a78bfa" stroke-width="1.7"/>
+  <text x="525" y="124" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#1a2332">Base Forecast y_TSFM</text>
+  <text x="525" y="143" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#7c3aed">trainable</text>
+  <text x="525" y="160" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#5a6577">point prediction</text>
+
+  <line x1="610" y1="129" x2="675" y2="129" stroke="#2f6fed" stroke-width="2.2"/>
+  <circle cx="688" cy="129" r="12" fill="#fff" stroke="#2f6fed" stroke-width="2"/>
+  <text x="688" y="134" text-anchor="middle" font-size="15" font-weight="700" fill="#2f6fed">+</text>
+  <line x1="700" y1="129" x2="745" y2="129" stroke="#2f6fed" stroke-width="2.2"/>
+  <line x1="745" y1="129" x2="745" y2="205" stroke="#2f6fed" stroke-width="2.2" marker-end="url(#ab)"/>
+
+  <path d="M525 173 C525 200 620 220 700 265" fill="none" stroke="#8b95a5" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#ag)"/>
+  <text x="545" y="215" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#5a6577">forecast stats + uncertainty</text>
+
+  <line x1="160" y1="329" x2="220" y2="329" stroke="#7c3aed" stroke-width="2.2" marker-end="url(#ap)"/>
+  <rect x="220" y="295" width="160" height="78" rx="10" fill="#f3e8ff" stroke="#a78bfa" stroke-width="1.7"/>
+  <text x="300" y="324" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1a2332">Acquisition Policy</text>
+  <text x="300" y="343" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#7c3aed">RL · invoke / skip</text>
+  <text x="300" y="360" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#5a6577">trainable</text>
+
+  <line x1="380" y1="329" x2="440" y2="329" stroke="#7c3aed" stroke-width="2.2" marker-end="url(#ap)"/>
+  <rect x="440" y="295" width="170" height="78" rx="10" fill="#f3e8ff" stroke="#a78bfa" stroke-width="1.7"/>
+  <text x="525" y="320" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#1a2332">GRPO LLM Generator</text>
+  <text x="525" y="339" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#7c3aed">Qwen2.5-1.5B</text>
+  <text x="525" y="356" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#5a6577">process reward · trainable</text>
+
+  <line x1="610" y1="329" x2="655" y2="329" stroke="#7c3aed" stroke-width="2.2" marker-end="url(#ap)"/>
+  <rect x="655" y="295" width="135" height="78" rx="10" fill="#e8f0fe" stroke="#7aa2f7" stroke-width="1.7"/>
+  <circle cx="772" cy="309" r="9" fill="#2f6fed"/>
+  <text x="772" y="313" text-anchor="middle" font-size="10" fill="#fff">F</text>
+  <text x="722" y="332" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#1a2332">Frozen Text</text>
+  <text x="722" y="348" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#1a2332">Encoder</text>
+  <text x="722" y="364" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#5a6577">z in R^d</text>
+
+  <path d="M790 329 H812 V270 H835" fill="none" stroke="#7c3aed" stroke-width="2.2" marker-end="url(#ap)"/>
+  <path d="M812 329 V385 H835" fill="none" stroke="#7c3aed" stroke-width="2.2" marker-end="url(#ap)"/>
+
+  <rect x="835" y="240" width="145" height="62" rx="10" fill="#f3e8ff" stroke="#a78bfa" stroke-width="1.7"/>
+  <text x="907" y="263" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#1a2332">Dynamic Gate g</text>
+  <text x="907" y="280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="9.5" fill="#5a6577">g = sigma(W · [z, s, u])</text>
+  <text x="907" y="294" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#7c3aed">trainable</text>
+
+  <rect x="835" y="360" width="145" height="50" rx="10" fill="#f3e8ff" stroke="#a78bfa" stroke-width="1.7"/>
+  <text x="907" y="381" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#1a2332">Text Projection</text>
+  <text x="907" y="398" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#5a6577">f_text(z_res)</text>
+
+  <line x1="980" y1="271" x2="1000" y2="271" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="980" y1="385" x2="1000" y2="385" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="1000" y1="271" x2="1000" y2="385" stroke="#7c3aed" stroke-width="2"/>
+  <circle cx="1000" cy="328" r="12" fill="#fff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="1000" y="333" text-anchor="middle" font-size="14" font-weight="700" fill="#7c3aed">x</text>
+
+  <path d="M1000 316 V220 H790" fill="none" stroke="#7c3aed" stroke-width="2.2" marker-end="url(#ap)"/>
+
+  <text x="762" y="198" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#5a6577">fusion</text>
+  <circle cx="762" cy="220" r="14" fill="#fff" stroke="#1a2332" stroke-width="2"/>
+  <text x="762" y="225" text-anchor="middle" font-size="13" font-weight="700" fill="#1a2332">S</text>
+  <line x1="745" y1="205" x2="745" y2="220" stroke="#2f6fed" stroke-width="2.2"/>
+  <line x1="745" y1="220" x2="748" y2="220" stroke="#2f6fed" stroke-width="2.2"/>
+  <line x1="776" y1="220" x2="820" y2="220" stroke="#1a2332" stroke-width="2.2" marker-end="url(#ag)"/>
+
+  <rect x="820" y="178" width="175" height="84" rx="10" fill="#ffffff" stroke="#1a2332" stroke-width="2"/>
+  <text x="907" y="205" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1a2332">Final Prediction y</text>
+  <text x="907" y="224" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="9.5" fill="#5a6577">y = y_TSFM + g · f_text(z_res)</text>
+  <text x="907" y="243" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#7c3aed">gated correction</text>
+
+  <rect x="20" y="450" width="1060" height="160" rx="12" fill="#fafbfc" stroke="#d5dbe3" stroke-width="1.2"/>
+  <text x="40" y="478" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#5a6577">Training Feedback</text>
+
+  <rect x="50" y="500" width="150" height="50" rx="8" fill="#fff" stroke="#c5ced9" stroke-width="1.4"/>
+  <text x="125" y="522" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#1a2332">Forecast Error</text>
+  <text x="125" y="539" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#5a6577">y vs ground truth</text>
+
+  <line x1="200" y1="525" x2="260" y2="525" stroke="#dc2626" stroke-width="1.7" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+
+  <rect x="260" y="500" width="150" height="50" rx="8" fill="#fff7f7" stroke="#f87171" stroke-width="1.4"/>
+  <text x="335" y="522" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#dc2626">Reward Signal</text>
+  <text x="335" y="539" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#5a6577">from forecast error</text>
+
+  <path d="M335 500 C335 450 300 420 300 373" fill="none" stroke="#dc2626" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+  <path d="M380 500 C420 450 525 420 525 373" fill="none" stroke="#dc2626" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+
+  <text x="480" y="530" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#5a6577">Closed-loop training: forecast error updates the acquisition policy and GRPO generator.</text>
+
+  <line x1="50" y1="620" x2="76" y2="620" stroke="#2f6fed" stroke-width="3"/>
+  <text x="82" y="624" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#5a6577">Numerical path</text>
+  <line x1="190" y1="620" x2="216" y2="620" stroke="#7c3aed" stroke-width="3"/>
+  <text x="222" y="624" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#5a6577">Text / RL path</text>
+  <line x1="330" y1="620" x2="356" y2="620" stroke="#8b95a5" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="362" y="624" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#5a6577">Context</text>
+  <line x1="440" y1="620" x2="466" y2="620" stroke="#dc2626" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="472" y="624" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#5a6577">Reward</text>
+  <rect x="545" y="612" width="14" height="14" rx="2" fill="#e8f0fe" stroke="#7aa2f7"/>
+  <text x="565" y="624" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#5a6577">Frozen</text>
+  <rect x="630" y="612" width="14" height="14" rx="2" fill="#f3e8ff" stroke="#a78bfa"/>
+  <text x="650" y="624" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#5a6577">Trainable</text>
+</svg>

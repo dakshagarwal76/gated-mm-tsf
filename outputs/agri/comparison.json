@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "mean": 150.08294677734375,
+    "std": 19.34457015991211,
+    "n": 496,
+    "n_train": 318,
+    "n_val": 49,
+    "n_test": 100
+  },
+  "seq_len": 24,
+  "pred_len": 6,
+  "device": "cuda",
+  "results": {
+    "Naive (last)": {
+      "mse": 0.11981608293950557,
+      "mae": 0.23700163543224334,
+      "n": 100
+    },
+    "Historical mean": {
+      "mse": 0.6037898655980826,
+      "mae": 0.5411130303144455,
+      "n": 100
+    },
+    "Drift": {
+      "mse": 0.12311653234064579,
+      "mae": 0.24036491453647613,
+      "n": 100
+    },
+    "DLinear": {
+      "mse": 0.31844054758548734,
+      "mae": 0.375562047958374,
+      "n": 100,
+      "train_seconds": 8.146448612213135
+    },
+    "TinyTransformer": {
+      "mse": 3.106544290781021,
+      "mae": 1.3191629147529602,
+      "n": 100,
+      "train_seconds": 7.981851100921631
+    },
+    "paper_context": {
+      "note": "TaTS Table2 Agriculture averages over pred_lens {6,8,10,12}; not same split/scale as this run",
+      "TaTS_iTransformer_MSE": 0.109,
+      "TaTS_PatchTST_MSE": 0.114,
+      "TaTS_DLinear_MSE": 0.214,
+      "UniModal_iTransformer_MSE": 0.122
+    },
+    "Ours": {
+      "mse": 3.513250950574875,
+      "mae": 1.409159870147705,
+      "invoke_rate": 0.0
+    },
+    "Ours (base-only)": {
+      "mse": 3.513250950574875,
+      "mae": 1.409159870147705,
+      "note": "numerical path only"
+    }
+  }
+}

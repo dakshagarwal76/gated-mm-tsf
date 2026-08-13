@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "mean": 382274656.0,
+    "std": 370151040.0,
+    "n": 297,
+    "n_train": 178,
+    "n_val": 29,
+    "n_test": 61
+  },
+  "seq_len": 24,
+  "pred_len": 6,
+  "device": "cuda",
+  "results": {
+    "Naive (last)": {
+      "mse": 94.76967514538374,
+      "mae": 4.578967876121646,
+      "n": 61
+    },
+    "Historical mean": {
+      "mse": 59.359806693968224,
+      "mae": 3.43037443864541,
+      "n": 61
+    },
+    "Drift": {
+      "mse": 113.19669140362349,
+      "mae": 5.104961426531682,
+      "n": 61
+    },
+    "DLinear": {
+      "mse": 73.95774454366965,
+      "mae": 4.586797323383268,
+      "n": 61,
+      "train_seconds": 2.3526992797851562
+    },
+    "TinyTransformer": {
+      "mse": 89.4024872076316,
+      "mae": 5.9491167068481445,
+      "n": 61,
+      "train_seconds": 1.6884698867797852
+    },
+    "Ours": {
+      "mse": 80.23737877705058,
+      "mae": 5.286750386972896,
+      "invoke_rate": 0.0
+    },
+    "Ours (base-only)": {
+      "mse": 80.23737877705058,
+      "mae": 5.286750386972896,
+      "note": "numerical path only"
+    },
+    "paper_context": {
+      "note": "TaTS Table2 Agriculture averages over pred_lens {6,8,10,12}; not same split/scale as this run",
+      "TaTS_iTransformer_MSE": 0.109,
+      "TaTS_PatchTST_MSE": 0.114,
+      "TaTS_DLinear_MSE": 0.214,
+      "UniModal_iTransformer_MSE": 0.122
+    }
+  }
+}
